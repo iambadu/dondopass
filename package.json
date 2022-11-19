@@ -1,0 +1,11 @@
+{
+  "name": "dondopass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "iambadu <baduplus@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "web"
+  ]
+}

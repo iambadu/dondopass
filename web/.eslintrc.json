@@ -1,0 +1,35 @@
+{
+  "ignorePatterns": [
+    "./node_modules",
+    "./build",
+    "./public",
+    "./types",
+    "*.d.ts",
+    "*.css"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "extends": ["react-app", "prettier", "airbnb"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "quotes": "warn",
+    "comma-dangle": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "singlequotes": true
+      }
+    ],
+    "no-console": "warn",
+    "jsx-quotes": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "curly": ["error", "all"],
+    "no-param-reassign": "error",
+    "import/no-anonymous-default-export": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
