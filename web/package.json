@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint \"src/**/*[.ts,.tsx]\"",
@@ -12,15 +12,27 @@
     "prettier:fix": "prettier --write \"src/**/*[.ts,.tsx]\""
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@mantine/core": "^5.8.2",
+    "@mantine/hooks": "^5.8.2",
+    "@reach/router": "^1.3.4",
+    "@vitejs/plugin-react": "^2.2.0",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "sort-by": "^1.2.0",
+    "vite": "^3.2.3",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-svgr": "^2.2.2",
+    "vite-tsconfig-paths": "^3.5.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.43.0",
-    "@vitejs/plugin-react": "^2.2.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -33,9 +45,6 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.7.1",
     "typescript": "^4.6.4",
-    "vite": "^3.2.3",
-    "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-svgr": "^2.2.2",
-    "vite-tsconfig-paths": "^3.5.2"
+    "vite-plugin-eslint": "^1.8.1"
   }
 }
