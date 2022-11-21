@@ -17,11 +17,17 @@
     "prettier/prettier": [
       "error",
       {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100,
+        "tabWidth": 2,
+        "semi": true,
         "endOfLine": "auto",
         "singlequotes": true
       }
     ],
     "no-console": "warn",
+    "object-curly-newline": "off",
     "jsx-quotes": "off",
     "react/jsx-props-no-spreading": "off",
     "react/function-component-definition": "off",
