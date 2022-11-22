@@ -43,3 +43,7 @@
     font-weight: 900;
     src: url('https://fonts.cdnfonts.com/s/31312/TypeMates  CeraRoundProBlack.woff') format('woff');
 }
+
+html {
+    height: 100%;
+}
