@@ -27,6 +27,8 @@
       }
     ],
     "no-console": "warn",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
     "object-curly-newline": "off",
     "jsx-quotes": "off",
     "react/jsx-props-no-spreading": "off",

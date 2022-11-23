@@ -31,8 +31,9 @@ const NavLink = (props: NavLinkProps) => {
 interface TopNavProps {
   links: { text: string; link: string }[];
 }
-const TopNav = (props: TopNavProps) => {
+function TopNav(props: TopNavProps) {
   const { links } = props;
+
   const NavList = styled.ul`
     margin: 0;
     padding: 0;
@@ -49,6 +50,6 @@ const TopNav = (props: TopNavProps) => {
       </NavList>
     </nav>
   );
-};
+}
 
 export default TopNav;
