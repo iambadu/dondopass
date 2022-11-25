@@ -17,6 +17,13 @@ import { CONTAINER_WIDTH, HEADER_HEIGHT } from '../../utils/constants';
 import TopNav from './TopNav';
 import { OnMobile, OnMobileEnum } from '../../utils/components.utils';
 
+/**
+ *
+ * html {
+    font-size: calc(15px + 0.390625vw);
+}
+ */
+
 const TopHeader = () => {
   const { colors } = useMantineTheme();
   const [menuOpened, setMenuOpened] = useState<boolean>(false);
@@ -43,14 +50,16 @@ const TopHeader = () => {
         opacity: 1;
       }
     }
-
+    @media (min-width: 768px) {
+      display: none;
+    }
     height: calc(100vh - ${HEADER_HEIGHT}px);
     background-color: ${colors.dark[6]};
     border-radius: 0;
     border: 0;
     width: 100%;
     transition: transform;
-    animation: slide-in-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   `;
   const leftLinks = [
     { text: 'Home', link: '/' },
@@ -66,7 +75,7 @@ const TopHeader = () => {
       <StyledContainer size={CONTAINER_WIDTH}>
         <Group>
           <Title italic color="yellow.4" order={3}>
-            dondopasso
+            dondopass
           </Title>
           <OnMobile status={OnMobileEnum.HIDE}>
             <TopNav links={leftLinks} />
