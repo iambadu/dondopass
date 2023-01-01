@@ -2,9 +2,9 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {ReactNode} from 'react';
 import COLORS from './colors';
 import {useNavigation} from '@react-navigation/native';
-import AppIcon from './AppIcon';
+import {AppIcon} from './AppIcon';
 
-type AppHeaderProps = {
+export type AppHeaderProps = {
   home?: boolean;
   rightComponent?: ReactNode;
 };
@@ -14,6 +14,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({home, rightComponent}) => {
     iconName?: string;
   };
   const navigate = useNavigation();
+  const canGoBack = !home && navigate.canGoBack();
   const NavWithIcon: React.FC<NavWithIconProps> = ({screenName, iconName}) => {
     const navigateToScreen = () =>
       screenName
@@ -28,7 +29,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({home, rightComponent}) => {
   };
   return (
     <View style={styles.container}>
-      {!home && <NavWithIcon />}
+      {canGoBack && <NavWithIcon />}
       <Text style={styles.tempIcon}>dondopass</Text>
       {rightComponent ? (
         rightComponent
@@ -47,7 +48,6 @@ const styles = StyleSheet.create({
     color: COLORS.rose[600],
   },
   container: {
-    paddingHorizontal: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

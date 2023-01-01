@@ -4,8 +4,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {RootBottomTabList} from './types';
 import {Text} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import AppIcon from '../components/app-elements/AppIcon';
+import {AppIcon} from '../components/app-elements/AppIcon';
 import AppHeader from '../components/app-elements/AppHeader';
+import Home from '../screens/Home';
 
 const Navigation = () => {
   const RootTab = createBottomTabNavigator<RootBottomTabList>();
@@ -56,7 +57,7 @@ const Navigation = () => {
             );
           },
         })}>
-        <RootTab.Screen name="Home" component={DefaultScreen} />
+        <RootTab.Screen name="Home" component={Home} />
         <RootTab.Screen name="Search" component={DefaultScreen} />
         <RootTab.Screen name="Tickets" component={DefaultScreen} />
         <RootTab.Screen name="Profile" component={DefaultScreen} />
